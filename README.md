@@ -103,11 +103,12 @@ An Android app for making Minecraft skins and checking them on a 3D model. It wa
 
 <p align="center">
   <img src="images/minemaker-cover.jpg" width="19%" alt="Mine Maker cover">
+  <a href="images/minemaker-preview.mp4"><img src="images/minemaker-demo.gif" width="19%" alt="Editing a skin in the 3D editor"></a>
   <img src="images/minemaker-1.jpg" width="19%" alt="Skin collections by category">
   <img src="images/minemaker-2.jpg" width="19%" alt="New skin from Steve, Alex, empty or imported">
   <img src="images/minemaker-3.jpg" width="19%" alt="3D editor with drawing tools">
-  <img src="images/minemaker-6.jpg" width="19%" alt="Colour palettes">
 </p>
+<p align="center"><a href="images/minemaker-preview.mp4">▶ Watch the full Google Play preview video (80 s)</a></p>
 
 - Skin collections sorted by category, with favourites
 - Start from Steve, Alex, an empty template or your own file, in normal or HD size

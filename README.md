@@ -1,6 +1,6 @@
 # Ion Bogdan — AI Automation Engineer
 
-n8n · LLM integrations · Telegram & voice AI · TypeScript / Kotlin · Docker on VPS
+n8n · LLM & RAG · Voice AI (Retell) · TypeScript / Kotlin · Docker on VPS
 
 Selected projects. I design the architecture and ship with AI coding agents (Claude Code, Codex, Antigravity) — I specify, review and deploy every system myself.
 
@@ -29,11 +29,10 @@ flowchart LR
   B <--> GC[Google Calendar]
 ```
 
-- **Telephony:** carrier Virtual PBX → SIP trunk → self-hosted FreePBX → Retell AI
 - **Conversation Flow agent** in two languages: explains services and collects name, preferences and desired date
 - **3 n8n workflows:** post-call webhook → call log and Telegram alert; on-demand web call report; Cal.com bookings → CRM
 - HTTPS on every admin panel; FreePBX and n8n run on the same VPS
-- **Stack:** Retell AI, FreePBX, SIP, n8n, Cal.com, Google Sheets & Calendar, Telegram
+- **Stack:** Retell AI, FreePBX, SIP trunk, n8n, Cal.com, Google Sheets & Calendar, Telegram
 
 ### AI Biz Pilot — business assistant in Telegram
 Voice, text, photo and document commands → structured records across 16 business modules.
@@ -68,17 +67,9 @@ flowchart LR
 - Versioned prompt library (extraction → clustering → generation → scoring)
 - **Stack:** n8n, OpenRouter LLMs, LangChain nodes, PostgreSQL, Telegram
 
-### Orca Business OS — AI agents running a freelance business
-Notion as the single source of truth, driven by specialised coding agents and n8n.
-
-- Business agents (project manager, accountant) + dev agents (developer, reviewer, tester, designer)
-- 14 slash commands — new client, new repo, daily plan, delivery
-- n8n jobs on VPS: daily brief, invoice reminders, monthly reports
-- **Stack:** Claude Code, OpenCode, Notion MCP, n8n, Telegram, Git worktrees
-
 ---
 
-## Real-time systems
+## Real-time systems & Android
 
 ### Polymarket Liquidation Bot — TypeScript
 Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades Polymarket Up/Down markets.
@@ -90,22 +81,22 @@ Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades P
 - **Tests + CI/CD:** GitHub Actions deploys to VPS (Docker Compose, Traefik) on every push
 - Real-time web dashboard (SSE, TradingView charts), HMAC-signed webhooks to n8n
 
-### HFT Multi-Exchange Platform — Kotlin / Ktor
-Multi-module trading engine with deterministic replay and fail-closed risk.
+### TheSky — offline controller for a VR headset fleet
+Android tablet app that monitors and commands up to ~20 VR headsets on the local network, with no server and no cloud.
 
 ```mermaid
 flowchart LR
-  X[Binance · Bybit · OKX<br/>WebSocket / REST] --> MD[Market data<br/>gap detection]
-  MD --> E[Engine core<br/>pure, deterministic]
-  E --> RK[Risk engine<br/>kill switch]
-  RK --> OG[Order gateway<br/>idempotent]
-  OG --> J[(Audit journal<br/>+ replay)]
-  API[Ktor control plane<br/>health · metrics] -.-> E
+  T[Controller<br/>tablet app] <-->|SkyLink TCP<br/>length-prefixed JSON| P1[Player<br/>headset 1]
+  T <--> P2[Player<br/>headset N]
+  P1 -.->|UDP beacon| T
+  P2 -.->|UDP beacon| T
+  SIM[Fleet simulator<br/>20 fake devices] <--> T
 ```
 
-- 11 Gradle modules; OKX is observation-only by design
-- Contract tests on recorded exchange fixtures, scripted failure drills
-- **Stack:** Kotlin, Ktor, Coroutines, PostgreSQL, Prometheus, Grafana, Docker
+- Own protocol: version handshake, per-command acknowledgements, stable device IDs, devices discovered in ≤2 s
+- Clean Architecture + MVI across 19 modules; the fleet simulator runs the real player server code
+- Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
+- **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
 ### Funding Rate Arbitrage Bot — TypeScript
 Delta-neutral funding arbitrage scanner across Bybit, Binance, Bitget, Gate.io, OKX and Hyperliquid (read-only).

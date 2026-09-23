@@ -69,9 +69,9 @@ flowchart LR
 
 ---
 
-## Real-time systems & Android
+## Web & Android
 
-### Polymarket Liquidation Bot — TypeScript
+### Polymarket Liquidation Bot — Web · TypeScript
 Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades Polymarket Up/Down markets.
 
 ![Dashboard UI prototype, demo data](images/polymarket-dashboard.png)
@@ -79,7 +79,7 @@ Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades P
 - **Shadow / paper / live** modes; live orders signed with EIP-712
 - **Risk:** cooldowns, hourly/daily limits, kill switch, calibration monitor
 - **Tests + CI/CD:** GitHub Actions deploys to VPS (Docker Compose, Traefik) on every push
-- Real-time web dashboard (SSE, TradingView charts), HMAC-signed webhooks to n8n
+- Live web dashboard (SSE, TradingView charts), HMAC-signed webhooks to n8n
 
 ### TheSky — offline controller for a VR headset fleet
 Android tablet app that monitors and commands up to ~20 VR headsets on the local network, with no server and no cloud.

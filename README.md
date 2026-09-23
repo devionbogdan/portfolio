@@ -2,7 +2,7 @@
 
 n8n · LLM & RAG · Voice AI (Retell) · TypeScript / Kotlin · Docker on VPS
 
-Selected projects. I design the architecture and ship with AI coding agents (Claude Code, Codex, Antigravity) — I specify, review and deploy every system myself.
+Selected projects. I wrote Mine Maker by hand, without AI. The others I planned myself and built with AI coding tools, mostly Claude Code, then reviewed and deployed them myself.
 
 Source code is private — **walkthrough and code review available on request.**
 
@@ -82,7 +82,7 @@ Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades P
 - Live web dashboard (SSE, TradingView charts), HMAC-signed webhooks to n8n
 
 ### TheSky — offline controller for a VR headset fleet
-Android tablet app that monitors and commands up to ~20 VR headsets on the local network, with no server and no cloud.
+Android tablet app that monitors and commands up to ~20 VR headsets on the local network, with no server and no cloud. This is a from-scratch rewrite of an earlier version I wrote by hand, which isn't on GitHub.
 
 ```mermaid
 flowchart LR
@@ -101,7 +101,7 @@ flowchart LR
 ### Mine Maker — Minecraft skin editor for Android
 <img src="images/minemaker-icon.png" width="96" align="right" alt="Mine Maker icon">
 
-An Android app for drawing Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12.
+An Android app for drawing Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12. I wrote all of it myself, without AI tools.
 
 ```mermaid
 flowchart LR

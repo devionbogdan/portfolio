@@ -99,21 +99,22 @@ flowchart LR
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
 ### Mine Maker — Minecraft skin editor for Android
-<img src="images/minemaker-icon.png" width="96" align="right" alt="Mine Maker icon">
+<img src="images/minemaker-icon.png" width="80" align="right" alt="Mine Maker icon">
 
-An Android app for drawing Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12. I wrote all of it myself, without AI tools.
+An Android app for making Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12. I wrote all of it myself, without AI tools.
 
-```mermaid
-flowchart LR
-  E[Skin editor<br/>palettes · undo/redo] --> DB[(Saved skins<br/>Room)]
-  E --> V[3D preview<br/>Steve / Alex]
-  DB --> X[Export to<br/>Minecraft]
-```
+<p>
+  <img src="images/minemaker-1.jpg" width="24%" alt="Skin collections by category">
+  <img src="images/minemaker-2.jpg" width="24%" alt="New skin from Steve, Alex, empty or imported">
+  <img src="images/minemaker-3.jpg" width="24%" alt="3D editor with drawing tools">
+  <img src="images/minemaker-6.jpg" width="24%" alt="Colour palettes">
+</p>
 
-- Draw on the skin texture with undo/redo, colour palettes and a colour picker, and see it live on a 3D Steve or Alex model
-- Skins are saved on the phone and exported as skin packs that Minecraft can import
-- 12 languages, light and dark theme, and a short in-app guide
-- Premium through Google Play Billing, AdMob ads with UMP consent, In-App Review
+- Skin collections sorted by category, with favourites
+- Start from Steve, Alex, an empty template or your own file, in normal or HD size
+- Draw straight on the 3D model, even while it's animated: pencil, noise, colorize, fill, eraser, undo/redo, and a button that generates a random skin
+- Colour picker and ready-made palettes; skins are saved on the phone and exported so Minecraft can import them
+- 12 languages, light and dark theme, installation guide, Premium through Google Play Billing, AdMob ads with UMP consent
 - **Stack:** Kotlin, MVVM, Koin, Room, Paging 3, Navigation, Coil, Rajawali (3D), Play Billing, AdMob
 
 ### Vista Guard — static site for Google Ads

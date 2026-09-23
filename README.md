@@ -98,14 +98,15 @@ flowchart LR
 - Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
-### <img src="images/minemaker-icon.png" width="24" align="top" alt=""> Mine Maker — Minecraft skin editor for Android
+### Mine Maker — Minecraft skin editor for Android
 An Android app for making Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12. I wrote all of it myself, without AI tools.
 
 <p align="center">
-  <img src="images/minemaker-1.jpg" width="24%" alt="Skin collections by category">
-  <img src="images/minemaker-2.jpg" width="24%" alt="New skin from Steve, Alex, empty or imported">
-  <img src="images/minemaker-3.jpg" width="24%" alt="3D editor with drawing tools">
-  <img src="images/minemaker-6.jpg" width="24%" alt="Colour palettes">
+  <img src="images/minemaker-cover.jpg" width="19%" alt="Mine Maker cover">
+  <img src="images/minemaker-1.jpg" width="19%" alt="Skin collections by category">
+  <img src="images/minemaker-2.jpg" width="19%" alt="New skin from Steve, Alex, empty or imported">
+  <img src="images/minemaker-3.jpg" width="19%" alt="3D editor with drawing tools">
+  <img src="images/minemaker-6.jpg" width="19%" alt="Colour palettes">
 </p>
 
 - Skin collections sorted by category, with favourites

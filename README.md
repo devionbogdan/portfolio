@@ -98,15 +98,6 @@ flowchart LR
 - Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
-### Funding Rate Arbitrage Bot — TypeScript
-Delta-neutral funding arbitrage scanner across Bybit, Binance, Bitget, Gate.io, OKX and Hyperliquid (read-only).
-
-![Dashboard](images/funding-dashboard.png)
-
-- 4 strategies + profitability guard that accounts for all four trade fees
-- Margin health score with automatic unwind of both legs
-- **Stack:** TypeScript, CCXT, Node.js HTTP server, Docker, GitHub Actions deploy
-
 ---
 
 ## Web

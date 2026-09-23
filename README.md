@@ -12,6 +12,29 @@ Source code is private — **walkthrough and code review available on request.**
 
 ## AI & n8n automation
 
+### AI Voice Receptionist — client project, in production
+Real phone line for a VR entertainment venue, answered by an AI voice agent in Romanian and Russian. Call reports and bookings reach the team and the CRM automatically.
+
+```mermaid
+flowchart LR
+  C[Caller] --> PBX[Operator<br/>Virtual PBX]
+  PBX -->|SIP trunk| FP[FreePBX<br/>self-hosted VPS]
+  FP -->|SIP| R[Retell AI agent<br/>RO / RU]
+  R -->|post-call webhook| N[n8n]
+  N --> GS[(Google Sheets<br/>call log)]
+  N --> TG[Telegram<br/>staff alert]
+  TG -.->|link| WR[n8n web<br/>call report]
+  B[Cal.com booking] -->|webhook| N
+  N --> CRM[(Sheets CRM)]
+  B <--> GC[Google Calendar]
+```
+
+- **Telephony:** carrier Virtual PBX → SIP trunk → self-hosted FreePBX → Retell AI
+- **Conversation Flow agent** in two languages: explains services and collects name, preferences and desired date
+- **3 n8n workflows:** post-call webhook → call log and Telegram alert; on-demand web call report; Cal.com bookings → CRM
+- HTTPS on every admin panel; FreePBX and n8n run on the same VPS
+- **Stack:** Retell AI, FreePBX, SIP, n8n, Cal.com, Google Sheets & Calendar, Telegram
+
 ### AI Biz Pilot — business assistant in Telegram
 Voice, text, photo and document commands → structured records across 16 business modules.
 

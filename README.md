@@ -98,10 +98,6 @@ flowchart LR
 - Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
----
-
-## Web
-
 ### Vista Guard — static site for Google Ads
 22-page German site rebuilt from WordPress into a Python-generated static site. €0/month hosting.
 

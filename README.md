@@ -98,6 +98,24 @@ flowchart LR
 - Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
+### Mine Maker — Minecraft skin editor for Android
+<img src="images/minemaker-icon.png" width="96" align="right" alt="Mine Maker icon">
+
+An Android app for drawing Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12.
+
+```mermaid
+flowchart LR
+  E[Skin editor<br/>palettes · undo/redo] --> DB[(Saved skins<br/>Room)]
+  E --> V[3D preview<br/>Steve / Alex]
+  DB --> X[Export to<br/>Minecraft]
+```
+
+- Draw on the skin texture with undo/redo, colour palettes and a colour picker, and see it live on a 3D Steve or Alex model
+- Skins are saved on the phone and exported as skin packs that Minecraft can import
+- 12 languages, light and dark theme, and a short in-app guide
+- Premium through Google Play Billing, AdMob ads with UMP consent, In-App Review
+- **Stack:** Kotlin, MVVM, Koin, Room, Paging 3, Navigation, Coil, Rajawali (3D), Play Billing, AdMob
+
 ### Vista Guard — static site for Google Ads
 22-page German site rebuilt from WordPress into a Python-generated static site. €0/month hosting.
 

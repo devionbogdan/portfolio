@@ -98,7 +98,7 @@ flowchart LR
 - Signed daily licences (ECDSA P-256), device binding via Android Keystore, geofenced access
 - **Stack:** Kotlin, Jetpack Compose, Coroutines, Ktor sockets, Room, DataStore, Koin, Media3, Firestore rules
 
-### <img src="images/minemaker-icon.png" width="28" align="middle" alt=""> Mine Maker — Minecraft skin editor for Android
+### <img src="images/minemaker-icon.png" width="24" align="top" alt=""> Mine Maker — Minecraft skin editor for Android
 An Android app for making Minecraft skins and checking them on a 3D model. It was published on Google Play, up to version 1.12. I wrote all of it myself, without AI tools.
 
 <p align="center">

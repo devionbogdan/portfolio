@@ -34,23 +34,6 @@ flowchart LR
 - HTTPS on every admin panel; FreePBX and n8n run on the same VPS
 - **Stack:** Retell AI, FreePBX, SIP trunk, n8n, Cal.com, Google Sheets & Calendar, Telegram
 
-### AI Biz Pilot — business assistant in Telegram
-Voice, text, photo and document commands → structured records across 16 business modules.
-
-```mermaid
-flowchart LR
-  T[Telegram<br/>voice · text · photo · PDF] --> W[Whisper / Vision]
-  W --> R[LLM router<br/>JSON mode]
-  R --> SQL[(PostgreSQL 16<br/>+ pgvector)]
-  R --> G[Google Calendar<br/>& Sheets]
-  SQL --> A[Answer + ✅/❌ confirm]
-```
-
-- **n8n:** 64-node main workflow + cron workflow for proactive calendar alerts
-- **No hallucinated numbers:** totals and reports computed in SQL; the LLM only parses language
-- **RAG** over uploaded documents with pgvector; confirmation buttons before risky writes
-- **Stack:** n8n, OpenAI, Whisper, PostgreSQL + pgvector, Docker, daily backups
-
 ### SaaS Opportunity Finder — market research pipeline
 Mines real 1–3★ App Store reviews and Reddit, clusters complaints, scores product opportunities.
 
@@ -70,16 +53,6 @@ flowchart LR
 ---
 
 ## Web & Android
-
-### Polymarket Liquidation Bot — Web · TypeScript
-Reads liquidation cascades and open interest on Binance, Bybit and OKX, trades Polymarket Up/Down markets.
-
-![Dashboard UI prototype, demo data](images/polymarket-dashboard.png)
-
-- **Shadow / paper / live** modes; live orders signed with EIP-712
-- **Risk:** cooldowns, hourly/daily limits, kill switch, calibration monitor
-- **Tests + CI/CD:** GitHub Actions deploys to VPS (Docker Compose, Traefik) on every push
-- Live web dashboard (SSE, TradingView charts), HMAC-signed webhooks to n8n
 
 ### TheSky — offline controller for a VR headset fleet
 Android tablet app that monitors and commands up to ~20 VR headsets on the local network, with no server and no cloud. This is a from-scratch rewrite of an earlier version I wrote by hand, which isn't on GitHub.
